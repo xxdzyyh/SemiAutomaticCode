@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -710,10 +711,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RHk-4I-g8t">
-                                <rect key="frame" x="18" y="258" width="77" height="25"/>
+                                <rect key="frame" x="19" y="258" width="76" height="26"/>
                                 <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="nQB-H4-oxV" id="gNR-HN-urE">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="Tx2-Vq-KyV">
                                         <items>
                                             <menuItem title="Item 1" state="on" id="nQB-H4-oxV"/>
@@ -740,11 +741,11 @@
                                         </textView>
                                     </subviews>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="mmQ-pP-8Ls">
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="mmQ-pP-8Ls">
                                     <rect key="frame" x="-100" y="-100" width="240" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="fpK-0Y-bjq">
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="fpK-0Y-bjq">
                                     <rect key="frame" x="189" y="0.0" width="16" height="181"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -766,19 +767,18 @@
                                         </textView>
                                     </subviews>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="eHi-uz-9lN">
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="eHi-uz-9lN">
                                     <rect key="frame" x="-100" y="-100" width="240" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="ay6-IC-ikX">
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="ay6-IC-ikX">
                                     <rect key="frame" x="189" y="0.0" width="16" height="181"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Eac-gJ-dbs">
-                                <rect key="frame" x="200" y="12" width="81" height="32"/>
+                                <rect key="frame" x="207" y="12" width="67" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="69" id="Ll4-Fy-5su"/>
                                     <constraint firstAttribute="height" constant="21" id="xKX-Hf-nTO"/>
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="生成" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EJ2-zj-67u">
@@ -811,7 +811,6 @@
                         <outlet property="inputTextView" destination="n7v-pW-6dC" id="ybn-ee-FDm"/>
                         <outlet property="outputTextView" destination="6d6-uT-ggc" id="ScS-xO-g7R"/>
                         <outlet property="popUpButton" destination="RHk-4I-g8t" id="hvt-HP-I9w"/>
-                        <outlet property="textView" destination="6d6-uT-ggc" id="5st-i9-4uK"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
