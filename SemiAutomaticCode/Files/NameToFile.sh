@@ -1,9 +1,28 @@
-awk 'BEGIN {
+#!/bin/bash
+
+array=$(awk '{
+	if ($1~/Label/) {
+		print "@property (nonatomic, strong) UILabel *"$1";";
+	} else if ($1~/Button/) {
+		print "@property (nonatomic, strong) UIButton *"$1";";
+	} else if ($1~/TextField/) {
+		print "@property (nonatomic, strong) UITextField *"$1";";
+	} else if ($1~/ImageView/) {
+		print "@property (nonatomic, strong) UIImageView *"$1";";
+	} else {
+		print "@property (nonatomic, strong) UIView *"$1";";
+	}
+}' $1)
+
+echo $array | sed 's/;/;\n/g;' | awk 'BEGIN {
+	declear="";
 	getter="";
 	constraints="";
 	subviews="";
 } {
 	if ($0~/@property/) {
+		declear=declear$0"\n"
+
 		propertyname=substr($5,2,length($5)-2);
 		property="_"propertyname;
 		
@@ -47,8 +66,13 @@ awk 'BEGIN {
 		} 
 	}
 } END {
+	print declear;
     print "- (void)setupSubviews {\n	"subviews"\n}";
     print "- (void)setupContraints {\n    "constraints"\n}";
 	print getter;
-}' $1
+}' 
+
+
+
+
 

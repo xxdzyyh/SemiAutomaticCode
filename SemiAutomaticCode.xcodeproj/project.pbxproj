@@ -12,9 +12,10 @@
 		D4C3F9F722C3492200DEA636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4C3F9F622C3492200DEA636 /* Assets.xcassets */; };
 		D4C3F9FA22C3492200DEA636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C3F9F822C3492200DEA636 /* Main.storyboard */; };
 		D4C3F9FD22C3492200DEA636 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C3F9FC22C3492200DEA636 /* main.m */; };
-		D4C3FA0622C355DC00DEA636 /* declearToFile.sh in Resources */ = {isa = PBXBuildFile; fileRef = D4C3FA0522C355DC00DEA636 /* declearToFile.sh */; };
+		D4C3FA0622C355DC00DEA636 /* DeclearToFile.sh in Resources */ = {isa = PBXBuildFile; fileRef = D4C3FA0522C355DC00DEA636 /* DeclearToFile.sh */; };
 		D4C3FA0822C3566000DEA636 /* JsonToModel.sh in Resources */ = {isa = PBXBuildFile; fileRef = D4C3FA0722C3566000DEA636 /* JsonToModel.sh */; };
 		D4C3FA0A22C3568F00DEA636 /* NameToDeclear.sh in Resources */ = {isa = PBXBuildFile; fileRef = D4C3FA0922C3568F00DEA636 /* NameToDeclear.sh */; };
+		D4C3FA1222C3814B00DEA636 /* NameToFile.sh in Resources */ = {isa = PBXBuildFile; fileRef = D4C3FA1122C3814B00DEA636 /* NameToFile.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +29,10 @@
 		D4C3F9FB22C3492200DEA636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4C3F9FC22C3492200DEA636 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D4C3F9FE22C3492200DEA636 /* SemiAutomaticCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SemiAutomaticCode.entitlements; sourceTree = "<group>"; };
-		D4C3FA0522C355DC00DEA636 /* declearToFile.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = declearToFile.sh; sourceTree = "<group>"; };
+		D4C3FA0522C355DC00DEA636 /* DeclearToFile.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = DeclearToFile.sh; sourceTree = "<group>"; };
 		D4C3FA0722C3566000DEA636 /* JsonToModel.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = JsonToModel.sh; sourceTree = "<group>"; };
 		D4C3FA0922C3568F00DEA636 /* NameToDeclear.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = NameToDeclear.sh; sourceTree = "<group>"; };
+		D4C3FA1122C3814B00DEA636 /* NameToFile.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = NameToFile.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +82,10 @@
 		D4C3FA0422C3556600DEA636 /* Files */ = {
 			isa = PBXGroup;
 			children = (
-				D4C3FA0522C355DC00DEA636 /* declearToFile.sh */,
+				D4C3FA0522C355DC00DEA636 /* DeclearToFile.sh */,
 				D4C3FA0722C3566000DEA636 /* JsonToModel.sh */,
 				D4C3FA0922C3568F00DEA636 /* NameToDeclear.sh */,
+				D4C3FA1122C3814B00DEA636 /* NameToFile.sh */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -149,11 +152,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C3FA1222C3814B00DEA636 /* NameToFile.sh in Resources */,
 				D4C3F9F722C3492200DEA636 /* Assets.xcassets in Resources */,
 				D4C3FA0A22C3568F00DEA636 /* NameToDeclear.sh in Resources */,
 				D4C3FA0822C3566000DEA636 /* JsonToModel.sh in Resources */,
 				D4C3F9FA22C3492200DEA636 /* Main.storyboard in Resources */,
-				D4C3FA0622C355DC00DEA636 /* declearToFile.sh in Resources */,
+				D4C3FA0622C355DC00DEA636 /* DeclearToFile.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

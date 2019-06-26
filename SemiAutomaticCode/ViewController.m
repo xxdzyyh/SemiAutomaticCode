@@ -34,7 +34,7 @@
 
 - (void)setupItems {
     [self.popUpButton removeAllItems];
-    [self.popUpButton addItemsWithTitles:@[kNameToDeclear,kDeclearToFile,kJsonToDeclear]];
+    [self.popUpButton addItemsWithTitles:@[kNameToDeclear,kDeclearToFile,kJsonToDeclear,kNameToFile]];
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -52,11 +52,11 @@
     if ([self.popUpButton.selectedItem.title isEqualToString:kNameToDeclear]) {
         shellScriptPath = [[NSBundle mainBundle] pathForResource:@"NameToDeclear" ofType:@"sh"];
     } else if ([self.popUpButton.selectedItem.title isEqualToString:kDeclearToFile]) {
-        shellScriptPath = [[NSBundle mainBundle] pathForResource:@"declearToFile" ofType:@"sh"];
+        shellScriptPath = [[NSBundle mainBundle] pathForResource:@"DeclearToFile" ofType:@"sh"];
     } else if ([self.popUpButton.selectedItem.title isEqualToString:kJsonToDeclear]) {
         shellScriptPath = [[NSBundle mainBundle] pathForResource:@"JsonToModel" ofType:@"sh"];
     } else if ([self.popUpButton.selectedItem.title isEqualToString:kNameToFile]) {
-        
+        shellScriptPath = [[NSBundle mainBundle] pathForResource:@"NameToFile" ofType:@"sh"];
     }
     
     NSString *shellStr = [NSString stringWithFormat:@"echo '%@' | sh %@",self.inputTextView.string,shellScriptPath];
