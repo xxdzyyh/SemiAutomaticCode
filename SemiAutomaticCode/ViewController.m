@@ -72,10 +72,8 @@
     NSFileHandle *file = [pipe fileHandleForReading];
     NSData *data =[file readDataToEndOfFile];
     NSString *strReturnFromShell = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-    
-    NSLog(@"The return content from shell script is: %@",strReturnFromShell);
-    
-    self.outputTextView.string = strReturnFromShell;
+
+	self.outputTextView.string = strReturnFromShell;
 }
 
 @end
