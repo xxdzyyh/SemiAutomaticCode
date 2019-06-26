@@ -9,7 +9,9 @@ array=$(awk '{
 		print "@property (nonatomic, strong) UITextField *"$1";";
 	} else if ($1~/ImageView/) {
 		print "@property (nonatomic, strong) UIImageView *"$1";";
-	} else {
+    }  else if ($1~/TextView/) {
+        print "@property (nonatomic, strong) UITextView *"$1";";
+    }   else if ($1 > 0) {
 		print "@property (nonatomic, strong) UIView *"$1";";
 	}
 }' $1)
