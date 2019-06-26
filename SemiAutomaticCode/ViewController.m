@@ -8,6 +8,11 @@
 
 #import "ViewController.h"
 
+#define kNameToDeclear @"控件名字生成属性声明"
+#define kDeclearToFile @"控件属性声明生成getter"
+#define kJsonToDeclear @"Json生成属性声明"
+#define kNameToFile    @"控件名字生成getter/addSubview.."
+
 @interface ViewController()
 
 @property (weak) IBOutlet NSPopUpButton *popUpButton;
@@ -29,7 +34,7 @@
 
 - (void)setupItems {
     [self.popUpButton removeAllItems];
-    [self.popUpButton addItemsWithTitles:@[@"控件名字生成属性声明",@"属性生成getter",@"Json生成属性声明"]];
+    [self.popUpButton addItemsWithTitles:@[kNameToDeclear,kDeclearToFile,kJsonToDeclear]];
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -44,12 +49,14 @@
     
     NSString *shellScriptPath = nil;
     
-    if ([self.popUpButton.selectedItem.title isEqualToString:@"控件名字生成属性声明"]) {
+    if ([self.popUpButton.selectedItem.title isEqualToString:kNameToDeclear]) {
         shellScriptPath = [[NSBundle mainBundle] pathForResource:@"NameToDeclear" ofType:@"sh"];
-    } else if ([self.popUpButton.selectedItem.title isEqualToString:@"属性生成getter"]) {
+    } else if ([self.popUpButton.selectedItem.title isEqualToString:kDeclearToFile]) {
         shellScriptPath = [[NSBundle mainBundle] pathForResource:@"declearToFile" ofType:@"sh"];
-    } else if ([self.popUpButton.selectedItem.title isEqualToString:@"Json生成属性声明"]) {
+    } else if ([self.popUpButton.selectedItem.title isEqualToString:kJsonToDeclear]) {
         shellScriptPath = [[NSBundle mainBundle] pathForResource:@"JsonToModel" ofType:@"sh"];
+    } else if ([self.popUpButton.selectedItem.title isEqualToString:kNameToFile]) {
+        
     }
     
     NSString *shellStr = [NSString stringWithFormat:@"echo '%@' | sh %@",self.inputTextView.string,shellScriptPath];

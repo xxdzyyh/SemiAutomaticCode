@@ -4,8 +4,6 @@ awk 'BEGIN {
 	getter="";
 	constraints="";
 	subviews="";
-	hasSubviewFn=0;
-	hasConstraintsFn=0;
 } {
 	if ($0~/@property/) {
 		propertyname=substr($5,2,length($5)-2);
@@ -49,29 +47,10 @@ awk 'BEGIN {
 			\
 			}];\n\n";
 		} 
-	} else {
-		if ($0~/setupSubviews/) {
-			hasSubviewFn=1;
-		}
-
-		if ($0~/setupContraints/) {
-			hasConstraintsFn=1;
-		}
 	}
 } END {
-	
-	if (hasSubviewFn) {
-		print subviews;
-	} else {
-		print "- (void)setupSubviews {\n	"subviews"\n}";
-	}
-
-	if (hasConstraintsFn) {
-		print constraints >> "'$path'";
-	} else {
-		print "- (void)setupContraints {\n    "constraints"\n}";
-	}
-
+    print "- (void)setupSubviews {\n	"subviews"\n}";
+    print "- (void)setupContraints {\n    "constraints"\n}";
 	print getter;
-
 }' $1
+
