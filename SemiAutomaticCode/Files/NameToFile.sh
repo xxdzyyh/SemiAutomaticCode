@@ -16,7 +16,7 @@ array=$(awk '{
 	}
 }' $1)
 
-echo $array | sed 's/;/;\n/g;' | awk 'BEGIN {
+echo $array | /usr/local/opt/gnu-sed/libexec/gnubin/sed 's/;/;\n/g;' | awk 'BEGIN {
 	declear="";
 	getter="";
 	constraints="";
