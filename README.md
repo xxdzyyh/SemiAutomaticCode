@@ -1,6 +1,8 @@
 ## 代码自动生成工具
 
-[项目地址](https://github.com/xxdzyyh/SemiAutomaticCode.git)
+注意：因为Mac的sed和gnu-sed有一些不同，Mac的sed版本可能比较低，所以遇到sed会指明使用gnu-sed。gnu-sed安装命令 brew install gnu-sed
+
+
 
 开发新项目，写了几个脚本用来生成一些格式固定的代码。
 
