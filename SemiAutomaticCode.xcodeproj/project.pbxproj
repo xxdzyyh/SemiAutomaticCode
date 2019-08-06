@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D443EE7522F7C4B100D2A1C7 /* lex_python.py in Resources */ = {isa = PBXBuildFile; fileRef = D443EE7422F7C4B100D2A1C7 /* lex_python.py */; };
 		D4C3F9F222C3491F00DEA636 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C3F9F122C3491F00DEA636 /* AppDelegate.m */; };
 		D4C3F9F522C3491F00DEA636 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C3F9F422C3491F00DEA636 /* ViewController.m */; };
 		D4C3F9F722C3492200DEA636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4C3F9F622C3492200DEA636 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D443EE7422F7C4B100D2A1C7 /* lex_python.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = lex_python.py; sourceTree = "<group>"; };
 		D4C3F9ED22C3491F00DEA636 /* SemiAutomaticCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SemiAutomaticCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C3F9F022C3491F00DEA636 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D4C3F9F122C3491F00DEA636 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				D4C3FA0722C3566000DEA636 /* JsonToModel.sh */,
 				D4C3FA0922C3568F00DEA636 /* NameToDeclear.sh */,
 				D4C3FA1122C3814B00DEA636 /* NameToFile.sh */,
+				D443EE7422F7C4B100D2A1C7 /* lex_python.py */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D443EE7522F7C4B100D2A1C7 /* lex_python.py in Resources */,
 				D4C3FA1222C3814B00DEA636 /* NameToFile.sh in Resources */,
 				D4C3F9F722C3492200DEA636 /* Assets.xcassets in Resources */,
 				D4C3FA0A22C3568F00DEA636 /* NameToDeclear.sh in Resources */,

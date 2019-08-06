@@ -1,3 +1,5 @@
+#!/bin/bash
+
 awk 'BEGIN {
 	getter="";
 	constraints="";

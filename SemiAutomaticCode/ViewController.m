@@ -12,6 +12,7 @@
 #define kDeclearToFile @"控件属性声明生成getter"
 #define kJsonToDeclear @"Json生成属性声明"
 #define kNameToFile    @"控件名字生成getter/addSubview.."
+#define kMyLanguaue    @"自定义语言生成view代码"
 
 @interface ViewController()
 
@@ -29,12 +30,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.inputTextView.automaticQuoteSubstitutionEnabled = NO;
+    self.outputTextView.automaticQuoteSubstitutionEnabled = NO;
+    
     [self setupItems];
 }
 
 - (void)setupItems {
     [self.popUpButton removeAllItems];
-    [self.popUpButton addItemsWithTitles:@[kNameToDeclear,kDeclearToFile,kJsonToDeclear,kNameToFile]];
+    [self.popUpButton addItemsWithTitles:@[kMyLanguaue,kNameToDeclear,kDeclearToFile,kJsonToDeclear,kNameToFile]];
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -49,7 +53,9 @@
     
     NSString *shellScriptPath = nil;
     
-    if ([self.popUpButton.selectedItem.title isEqualToString:kNameToDeclear]) {
+    if ([self.popUpButton.selectedItem.title isEqualToString:kMyLanguaue]) {
+        shellScriptPath = [[NSBundle mainBundle] pathForResource:@"lex_python" ofType:@"py"];
+    } else if ([self.popUpButton.selectedItem.title isEqualToString:kNameToDeclear]) {
         shellScriptPath = [[NSBundle mainBundle] pathForResource:@"NameToDeclear" ofType:@"sh"];
     } else if ([self.popUpButton.selectedItem.title isEqualToString:kDeclearToFile]) {
         shellScriptPath = [[NSBundle mainBundle] pathForResource:@"DeclearToFile" ofType:@"sh"];
@@ -59,7 +65,13 @@
         shellScriptPath = [[NSBundle mainBundle] pathForResource:@"NameToFile" ofType:@"sh"];
     }
     
-    NSString *shellStr = [NSString stringWithFormat:@"echo '%@' | sh %@",self.inputTextView.string,shellScriptPath];
+    NSString *shellStr = @"";
+    
+    if ([shellScriptPath hasSuffix:@".sh"]) {
+        shellStr = [NSString stringWithFormat:@"echo '%@' | sh %@",self.inputTextView.string,shellScriptPath];
+    } else {
+        shellStr = [NSString stringWithFormat:@"echo '%@' | %@",self.inputTextView.string,shellScriptPath];
+    }
     
     // -c 表示将后面的内容当成shellcode来执行
     [shellTask setArguments:[NSArray arrayWithObjects:@"-c",shellStr, nil]];
