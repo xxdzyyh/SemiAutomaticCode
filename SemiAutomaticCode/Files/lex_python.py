@@ -407,13 +407,13 @@ class Parser(object):
 			return 'UILabel'
 		elif 'button' in string.lower():
 			return 'UIButton'
-		elif 'textField' in string.lower():
+		elif 'textfield' in string.lower():
 			return 'UITextField'
-		elif 'imageView' in string.lower():
+		elif 'imageview' in string.lower():
 			return 'UIImageView'
-		elif 'textView' in string.lower():
+		elif 'textview' in string.lower():
 			return 'UITextView'
-		elif 'scrollView' in string.lower():
+		elif 'scrollview' in string.lower():
 			return 'UIScrollView'
 		else: 
 			return 'UIView'
